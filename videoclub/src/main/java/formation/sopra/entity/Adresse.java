@@ -3,18 +3,18 @@ package formation.sopra.entity;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class Adresse {
+public abstract class Adresse {
 
-	private Integer numero;
+	private Long numero;
 	private String rue;
 	private String ville;
 	private String codePostal;
 
-	public Integer getNumero() {
+	public Long getNumero() {
 		return numero;
 	}
 
-	public void setNumero(Integer numero) {
+	public void setNumero(Long numero) {
 		this.numero = numero;
 	}
 
@@ -39,6 +39,18 @@ public class Adresse {
 	}
 
 	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
+	}
+
+	public Adresse() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Adresse(Long numero, String rue, String ville, String codePostal) {
+		super();
+		this.numero = numero;
+		this.rue = rue;
+		this.ville = ville;
 		this.codePostal = codePostal;
 	}
 

@@ -1,16 +1,18 @@
 package formation.sopra.entity;
 
 import java.util.Collection;
+import java.util.List;
 
 import javax.persistence.*;
 
 @Entity
+@Table(name = "Adherent")
 public class Adherent {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer noAderent;
+	private Long noAderent;
 	@Enumerated(EnumType.STRING)
-	private Etitre civilite;
+	private ETitre civilite;
 	@Column
 	private String prenom;
 	@Column
@@ -22,8 +24,78 @@ public class Adherent {
 			@AttributeOverride(name = "cp", column = @Column(name = "Code_Postal", length = 5)) })
 	private Adresse adresse;
 
-	@OneToMany(mappedBy = "Adherent", fetch = FetchType.EAGER)
-	private Collection<Article> articlesEmpruntes;
+	@OneToMany(mappedBy = "adherent", fetch = FetchType.EAGER)
+	private List<Article> articlesEmpruntes;
 	@Version
 	private Integer version;
+
+	public Adherent() {
+
+	}
+
+	public Adherent(ETitre civilite, String prenom, String nom, Adresse adresse, List<Article> articlesEmpruntes) {
+		super();
+		this.civilite = civilite;
+		this.prenom = prenom;
+		this.nom = nom;
+		this.adresse = adresse;
+		this.articlesEmpruntes = articlesEmpruntes;
+	}
+
+	public Long getNoAderent() {
+		return noAderent;
+	}
+
+	public void setNoAderent(Long noAderent) {
+		this.noAderent = noAderent;
+	}
+
+	public ETitre getCivilite() {
+		return civilite;
+	}
+
+	public void setCivilite(ETitre civilite) {
+		this.civilite = civilite;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public Adresse getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
+	}
+
+	public Collection<Article> getArticlesEmpruntes() {
+		return articlesEmpruntes;
+	}
+
+	public void setArticlesEmpruntes(List<Article> articlesEmpruntes) {
+		this.articlesEmpruntes = articlesEmpruntes;
+	}
+
+	public Integer getVersion() {
+		return version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
+
 }

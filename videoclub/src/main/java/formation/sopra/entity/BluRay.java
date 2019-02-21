@@ -16,4 +16,18 @@ public class BluRay extends Article {
 		this.troisD = troisD;
 	}
 
+	public BluRay() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public BluRay(Integer nbDisques, Adherent emprunteur, Film film) {
+		super(nbDisques, emprunteur, film);
+		// TODO Auto-generated constructor stub
+	}
+
+	public BluRay(Boolean troisD) {
+		super();
+		this.troisD = troisD;
+	}
+
 }
