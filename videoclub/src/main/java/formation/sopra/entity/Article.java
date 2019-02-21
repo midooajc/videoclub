@@ -23,11 +23,9 @@ public abstract class Article {
 	private Integer version;
 
 	public Article() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Article(Integer nbDisques, Adherent emprunteur, Film film) {
-		super();
 		this.nbDisques = nbDisques;
 		this.emprunteur = emprunteur;
 		this.film = film;

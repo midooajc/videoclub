@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import formation.sopra.entity.Article;
+import formation.sopra.entity.BluRay;
+import formation.sopra.entity.Dvd;
 import formation.sopra.repository.ArticleRepository;
 
 @Controller
@@ -23,20 +25,20 @@ public class ArticleController {
 	@Autowired
 	ArticleRepository myArticleRepository;
 
-	@GetMapping("/add")
-	public String addArticle(Model model) {
-		return goEdit(new Article(), model);
+	@GetMapping("/addDVD")
+	public String addDVD(Model model) {
+		return goEdit(new Dvd(), model);
+	}
+	@GetMapping("/addBD")
+	public String addBD(Model model) {
+		return goEdit(new BluRay(), model);
 	}
 
 	@GetMapping("/edit")
 	public String updateArticle(@RequestParam(name = "noArticle") Long id, Model model) {
 		Optional<Article> opt = myArticleRepository.findById(id);
-		Article article = null;
-		if (opt.isPresent()) {
-			article = opt.get();
-		} else {
-			article = new Article();
-		}
+		Article article = opt.get();
+
 		return goEdit(article, model);
 	}
 

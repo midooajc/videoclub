@@ -28,11 +28,9 @@ public class Realisateur {
 	private Integer version;
 
 	public Realisateur() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Realisateur(String prenom, String nom, List<Film> films) {
-		super();
 		this.prenom = prenom;
 		this.nom = nom;
 		this.films = films;

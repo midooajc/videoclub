@@ -47,7 +47,6 @@ public abstract class Adresse {
 	}
 
 	public Adresse(Long numero, String rue, String ville, String codePostal) {
-		super();
 		this.numero = numero;
 		this.rue = rue;
 		this.ville = ville;

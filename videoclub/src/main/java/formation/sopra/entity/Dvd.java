@@ -16,18 +16,12 @@ public class Dvd extends Article {
 		this.bonus = bonus;
 	}
 
-	public Dvd(Boolean bonus) {
-		super();
-		this.bonus = bonus;
-	}
-
 	public Dvd() {
-		// TODO Auto-generated constructor stub
 	}
 
-	public Dvd(Integer nbDisques, Adherent emprunteur, Film film) {
+	public Dvd(Integer nbDisques, Adherent emprunteur, Film film, Boolean bonus) {
 		super(nbDisques, emprunteur, film);
-		// TODO Auto-generated constructor stub
+		this.bonus = bonus;
 	}
 
 }

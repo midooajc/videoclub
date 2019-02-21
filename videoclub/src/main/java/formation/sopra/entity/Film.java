@@ -35,11 +35,9 @@ public class Film {
 	private Integer version;
 
 	public Film() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Film(String titre, Date dateSortie, List<Article> articles, List<Realisateur> realisateurs) {
-		super();
 		this.titre = titre;
 		this.dateSortie = dateSortie;
 		this.articles = articles;

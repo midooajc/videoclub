@@ -34,7 +34,6 @@ public class Adherent {
 	}
 
 	public Adherent(ETitre civilite, String prenom, String nom, Adresse adresse, List<Article> articlesEmpruntes) {
-		super();
 		this.civilite = civilite;
 		this.prenom = prenom;
 		this.nom = nom;

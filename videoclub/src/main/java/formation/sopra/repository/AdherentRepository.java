@@ -1,13 +1,12 @@
 package formation.sopra.repository;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import formation.sopra.entity.Adherent;
+
 
 @Repository
-public interface AdherentRepository extends JpaRepository<Adherent, Integer> {
+public interface AdherentRepository extends JpaRepository<Adherent, Long> {
 
 }
