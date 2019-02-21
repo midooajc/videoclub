@@ -35,7 +35,10 @@
 		</div>
 		<div class="form-group">
 			<form:label path="troisD">troisD:</form:label>
-			<form:select path="troisD" cssClass="form-control" />
+			<form:select path="troisD" cssClass="form-control">
+				<form:option value="true" label="inclus" />
+				<form:option value="false" label="sans" />
+			</form:select>
 		</div>
 			<button type="submit" class="btn btn-success">enregistrer</button>
 			<a href="list" class="btn btn-warning">annuler</a>

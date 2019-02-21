@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Edition d'un DVD</title>
+<title>Edition d'un adherent</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -29,13 +29,19 @@
 			<form:input path="id" cssClass="form-control" readonly="true" />
 		</div>
 		<div class="form-group">
-			<form:label path="nbDisques">titre:</form:label>
-			<form:input type="number" path="nbDisques" cssClass="form-control" />
-			<form:errors path="nbDisques"><div class="alert alert-danger">nombre obligatoire</div></form:errors>
+			<form:label path="civilite">titre:</form:label>
+			<form:select path="civilite" items="${allCivilites}"
+				cssClass="form-control" />
 		</div>
 		<div class="form-group">
-			<form:label path="bonus">prenom:</form:label>
-			<form:select path="bonus" cssClass="form-control" />
+			<form:label path="prenom">prenom:</form:label>
+			<form:input path="prenom" cssClass="form-control" />
+			<form:errors cssClass="alert alert-danger" path="prenom"></form:errors>
+		</div>
+			<div class="form-group">
+			<form:label path="nom">nom:</form:label>
+			<form:input path="nom" cssClass="form-control" />
+			<form:errors cssClass="alert alert-danger" path="nom"></form:errors>
 		</div>
 			<button type="submit" class="btn btn-success">enregistrer</button>
 			<a href="list" class="btn btn-warning">annuler</a>

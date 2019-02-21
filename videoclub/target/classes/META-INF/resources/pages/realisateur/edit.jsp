@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Edition d'un adherent</title>
+<title>Edition d'un realisateur</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -20,19 +20,13 @@
 </head>
 
 <body class="container">
-	<h1>Edition d'un adherent</h1>
-	<form:form action="save" method="get" modelAttribute="adherent">
+	<h1>Edition d'un realisateur</h1>
+	<form:form action="save" method="get" modelAttribute="realisateur">
 	
 		<form:hidden path="version" />
 		<div class="form-group">
 			<form:label path="id">id:</form:label>
 			<form:input path="id" cssClass="form-control" readonly="true" />
-		</div>
-		<div class="form-group">
-			<form:label path="civilite">titre:</form:label>
-			<form:select path="civilite" items="${allCivilites}"
-				cssClass="form-control" />
-		</div>
 		<div class="form-group">
 			<form:label path="prenom">prenom:</form:label>
 			<form:input path="prenom" cssClass="form-control" />

@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Edition d'un adherent</title>
+<title>Edition d'un film</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -20,28 +20,16 @@
 </head>
 
 <body class="container">
-	<h1>Edition d'un adherent</h1>
-	<form:form action="save" method="get" modelAttribute="adherent">
+	<h1>Edition d'un film</h1>
+	<form:form action="save" method="get" modelAttribute="film">
 	
 		<form:hidden path="version" />
 		<div class="form-group">
 			<form:label path="id">id:</form:label>
 			<form:input path="id" cssClass="form-control" readonly="true" />
-		</div>
 		<div class="form-group">
-			<form:label path="civilite">titre:</form:label>
-			<form:select path="civilite" items="${allCivilites}"
-				cssClass="form-control" />
-		</div>
-		<div class="form-group">
-			<form:label path="prenom">prenom:</form:label>
-			<form:input path="prenom" cssClass="form-control" />
-			<form:errors cssClass="alert alert-danger" path="prenom"></form:errors>
-		</div>
-			<div class="form-group">
-			<form:label path="nom">nom:</form:label>
-			<form:input path="nom" cssClass="form-control" />
-			<form:errors cssClass="alert alert-danger" path="nom"></form:errors>
+			<form:label path="dateSortie">date de sortie:</form:label>
+			<form:input type="date" path="dateSortie" cssClass="form-control" />
 		</div>
 			<button type="submit" class="btn btn-success">enregistrer</button>
 			<a href="list" class="btn btn-warning">annuler</a>
