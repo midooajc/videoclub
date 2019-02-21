@@ -24,7 +24,7 @@ public class Adherent {
 			@AttributeOverride(name = "cp", column = @Column(name = "Code_Postal", length = 5)) })
 	private Adresse adresse;
 
-	@OneToMany(mappedBy = "adherent", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "emprunteur", fetch = FetchType.EAGER)
 	private List<Article> articlesEmpruntes;
 	@Version
 	private Integer version;
