@@ -43,8 +43,16 @@ public class ArticleController {
 	}
 
 	public String goEdit(Article article, Model model) {
-		model.addAttribute("article", article);
-		return "article/edit";
+		String reponse="article/list";
+		if(article.getClass().getName()=="formation.sopra.entity.Dvd"){
+			model.addAttribute("dvd", article);
+			reponse="article/editdvd";
+		}else if(article.getClass().getName()=="formation.sopra.entity.BluRay") {
+			model.addAttribute("bd", article);
+			reponse="article/editbd";
+		}
+		
+		return reponse;
 	}
 
 	@GetMapping("/delete")

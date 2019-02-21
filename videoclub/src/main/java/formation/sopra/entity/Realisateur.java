@@ -21,7 +21,7 @@ public class Realisateur {
 	private String prenom;
 	@Column
 	private String nom;
-	@ManyToMany(mappedBy = "realisateurs")
+	@ManyToMany
 	@JoinTable(name = "REALISATEUR_FILM", joinColumns = @JoinColumn(name = "REALISATEUR_ID"), inverseJoinColumns = @JoinColumn(name = "FILM_ID"))
 	public List<Film> films;
 	@Version
