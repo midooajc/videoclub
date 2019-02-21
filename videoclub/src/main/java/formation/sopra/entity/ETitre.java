@@ -1,6 +1,6 @@
 package formation.sopra.entity;
 
-public enum Etitre {
+public enum ETitre {
 	Monsieur, Madamme, Damoiseau, Mademoiselle;
 
 }

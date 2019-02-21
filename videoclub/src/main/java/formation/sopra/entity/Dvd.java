@@ -15,4 +15,19 @@ public class Dvd extends Article {
 	public void setBonus(Boolean bonus) {
 		this.bonus = bonus;
 	}
+
+	public Dvd(Boolean bonus) {
+		super();
+		this.bonus = bonus;
+	}
+
+	public Dvd() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Dvd(Integer nbDisques, Adherent emprunteur, Film film) {
+		super(nbDisques, emprunteur, film);
+		// TODO Auto-generated constructor stub
+	}
+
 }
