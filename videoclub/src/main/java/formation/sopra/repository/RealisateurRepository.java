@@ -7,6 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RealisateurRepository extends JpaRepository<Realisateur, Integer> {
-	Optional<Realisateur> findById(Integer id);
 
 }

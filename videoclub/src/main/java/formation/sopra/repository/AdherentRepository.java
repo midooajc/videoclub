@@ -9,6 +9,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AdherentRepository extends JpaRepository<Adherent, Integer> {
-	Optional<Adherent> findById(Integer id);
 
 }

@@ -7,6 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface FilmRepository extends JpaRepository<Film, Integer> {
-	Optional<Film> findById(Integer id);
 
 }
